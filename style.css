@@ -1,0 +1,11 @@
+:root {
+    --main-bg-color: #2B3D41;
+    --secondary-bg-color: #4C5F6B;
+    --text-color: #E0E2DBFF;
+    --highlight-color: #A37774;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--main-bg-color);
+}
