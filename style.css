@@ -123,8 +123,39 @@ nav>a:hover::after {
 }
 
 #links {
-    height: 100vh;
+    height: 25vh;
     width: 100vh;
+}
+
+.social-links {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 5vh;
+    margin: 2.5vh;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 250ms;
+}
+
+.social-links:hover {
+    transform: scale(1.5);
+}
+
+#social-links-container {
+    height: 10vh;
+    width: 50vw;
+    background-color: var(--secondary-bg-color);
+    border-radius: 1vh;
+    text-align: center;
+    position: relative;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+#scroll-down-links-container {
+    position: relative;
+    left: 42.5vw;
 }
 
 #home-link-nav { grid-area: home;}
