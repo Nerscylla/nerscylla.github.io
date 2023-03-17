@@ -1,9 +1,13 @@
 const learningID = setInterval(updateLearning, 1000)
 let currentLearning = 0
-let lightModeActive = 0
+let lightModeActive = localStorage.getItem("lightModeActive")
 
 function init() {
-    document.querySelector(":root").classList.toggle("not-light")
+    if(lightModeActive % 2 == 1) {
+        document.querySelector(":root").classList.add("light")
+    } else {
+        document.querySelector(":root").classList.add("not-light")
+    }
 }
 
 function updateLearning() {
@@ -20,6 +24,7 @@ function toggleLightmode() {
     document.querySelector(":root").classList.toggle("light")
     document.querySelector(":root").classList.toggle("not-light")
     lightModeActive++
+    localStorage.setItem("lightModeActive", lightModeActive)
     if(lightModeActive % 2 == 1) {
         document.getElementById("appearance").setAttribute("name", "moon")
     } else {
