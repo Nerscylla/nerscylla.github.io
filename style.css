@@ -3,15 +3,22 @@
     --secondary-bg-color: #4C5F6B;
     --text-color: #E0E2DB;
     --highlight-color: #A37774;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: 500ms;
+}
+
+.light {
+    filter: invert(1);
 }
 
 body {
-    overflow-x: hidden;
     background-color: var(--main-bg-color);
+    font-family: 'Roboto Mono', monospace;
 }
 
 nav {
-    height: 5vh;
+    height: 6vh;
     width: 90vw;
     margin: 0;
     padding: 0;
@@ -20,10 +27,11 @@ nav {
     display: grid;
     gap: 1vw;
     grid-template-areas: 
-    'home links about';
+    'home links about appearance';
     position: sticky;
     top: 1vh;
     left: 5vw;
+    z-index: 1000;
 }
 
 nav>a {
@@ -51,6 +59,20 @@ nav>a:hover::after {
     left: 12.5%;
 }
 
+#togleLightmode {
+    background-color: var(--secondary-bg-color);
+    border: 0;
+    color: var(--text-color);
+    font-size: 2.5vh;
+    grid-area: appearance;
+    transition: 500ms;
+    border-radius: 1vh;
+}
+
+#togleLightmode:hover {
+    filter: invert(1);
+}
+
 #home {
     height: 100vh;
     width: 100vw;
@@ -69,6 +91,40 @@ nav>a:hover::after {
 #greeting-container>label {
     font-size: 3vh;
     color: var(--text-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.scroll-down-button {
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+    font-size: 2.5vh;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.scroll-down-container {
+    background-color: var(--secondary-bg-color);
+    width: 15vh;
+    text-align: center;
+    border: var(--secondary-bg-color) 0.5vh solid;
+    border-radius: 1vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 250ms;
+}
+
+.scroll-down-container:hover {
+    transform: scale(1.25);
+}
+
+#scroll-down-greetings-container {
+    position: absolute;
+    top: 75vh;
+    left: 75vw;
+}
+
+#links {
+    height: 100vh;
+    width: 100vh;
 }
 
 #home-link-nav { grid-area: home;}
