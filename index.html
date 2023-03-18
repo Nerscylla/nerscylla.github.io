@@ -14,6 +14,7 @@
     <nav>
         <a id="home-link-nav" href="#home">Home</a>
         <a id="links-link-nav" href="#links">Links</a>
+        <a id="projects-link-nav" href="#projects">Projects</a>
         <a id="about-link-nav" href="#about">About</a>
         <button id="togleLightmode" onclick="toggleLightmode()">
             <ion-icon id="appearance" name="sunny"></ion-icon>
@@ -45,8 +46,55 @@
             
         </div>
         <div id="scroll-down-links-container" class="scroll-down-container">
-            <a href="#about" id="scroll-down-links" class="scroll-down-button">Go Down</a>
+            <a href="#projects" id="scroll-down-links" class="scroll-down-button">Go Down</a>
         </div>
+    </section>
+    <section id="projects">
+        <div id="projects-timeline"></div>
+        <div class="timeline-dots" id="project-01-dot"></div>
+        <div class="timeline-dots" id="project-02-dot"></div>
+        <div class="timeline-dots" id="project-03-dot"></div>
+        <div class="timeline-dots" id="project-04-dot"></div>
+        <a href="https://github.com/TheBaum123/rock-paper-scissors.py" class="project-link" id="project-01-link">
+            <div class="project-container" id="project-01-container">
+                <div class="project-title" id="project-01-title">
+                    <label class="project-title-label" id="project-01-title-label">rock-paper-scissors.py</label>
+                </div>
+                <div class="poject-description" id="project-01-description">
+                    <label class="project-description-label" id="project-01-description-label">My first ever really code that i wrote without any help. Not really proud, but i guess everyone starts somewhere.</label>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/TheBaum123/rock-paper-scissors.cpp" class="project-link" id="project-02-link">
+            <div class="project-container" id="project-02-container">
+                <div class="project-title" id="project-02-title">
+                    <label class="project-title-label" id="project-02-title-label">rock-paper-scissors.cpp</label>
+                </div>
+                <div class="poject-description" id="project-02-description">
+                    <label class="project-description-label" id="project-02-description-label">This is an old project, which I found on my hard drive, so I put it here.</label>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/TheBaum123/custom-startpage" class="project-link" id="project-03-link">
+            <div class="project-container" id="project-03-container">
+                <div class="project-title" id="project-03-title">
+                    <label class="project-title-label" id="project-03-title-label">custom-startpage</label>
+                </div>
+                <div class="poject-description" id="project-03-description">
+                    <label class="project-description-label" id="project-03-description-label">This github pages hosted custom startpage was originally only uploaded here so i wont have to habe a webserver for using my custom startpage on all browsers, but escalated from a reddit thread into one of my biggest side projects yet.</label>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/TheBaum123/thebaum123.github.io" class="project-link" id="project-04-link">
+            <div class="project-container" id="project-04-container">
+                <div class="project-title" id="project-04-title">
+                    <label class="project-title-label" id="project-04-title-label">TheBaum123.github.io</label>
+                </div>
+                <div class="poject-description" id="project-04-description">
+                    <label class="project-description-label" id="project-04-description-label">The source of the webpage you are on right now</label>
+                </div>
+            </div>
+        </a>
     </section>
     <script src="main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
