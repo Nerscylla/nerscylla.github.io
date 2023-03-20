@@ -20,6 +20,10 @@
             <ion-icon id="appearance" name="sunny"></ion-icon>
         </button>
     </nav>
+    <section id="cookiePrompt">
+        <button id="enableCookies" onclick="enableCookies()">Enable cookies</button>
+        <button id="disableCookies" onclick="disableCookies()">Disable cookies</button>
+    </section>
     <section id="home">
         <div id="greeting-container">
             <label class="greeting" id="greeting1">Hello,</label>
@@ -95,6 +99,10 @@
                 </div>
             </div>
         </a>
+    </section>
+    <section id="about">
+        <label id="storedCookies"></label>
+        <button id="removeCookies" onclick="disableCookies()">Remove my stored Cookies</button>
     </section>
     <script src="main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

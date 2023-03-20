@@ -1,12 +1,18 @@
 const learningID = setInterval(updateLearning, 1000)
 let currentLearning = 0
 let lightModeActive = localStorage.getItem("lightModeActive")
+let cookiesEnabled = localStorage.getItem("cookiesEnabled")
 
 function init() {
-    if(lightModeActive % 2 == 1) {
-        document.querySelector(":root").classList.add("light")
+    document.getElementById("cookiePrompt").hidden = true
+    if(cookiesEnabled) {
+        if(lightModeActive % 2 == 1) {
+            document.querySelector(":root").classList.add("light")
+        } else {
+            document.querySelector(":root").classList.add("not-light")
+        }
     } else {
-        document.querySelector(":root").classList.add("not-light")
+        document.getElementById("cookiePrompt").hidden = false
     }
 }
 
@@ -24,10 +30,24 @@ function toggleLightmode() {
     document.querySelector(":root").classList.toggle("light")
     document.querySelector(":root").classList.toggle("not-light")
     lightModeActive++
-    localStorage.setItem("lightModeActive", lightModeActive)
-    if(lightModeActive % 2 == 1) {
-        document.getElementById("appearance").setAttribute("name", "moon")
-    } else {
-        document.getElementById("appearance").setAttribute("name", "sunny")
+        if(cookiesEnabled) {
+        localStorage.setItem("lightModeActive", lightModeActive)
+        if(lightModeActive % 2 == 1) {
+            document.getElementById("appearance").setAttribute("name", "moon")
+        } else {
+            document.getElementById("appearance").setAttribute("name", "sunny")
+        }
     }
+}
+
+function enableCookies() {
+    cookiesEnabled = true
+    localStorage.setItem("cookiesEnabled", true)
+    document.getElementById("cookiePrompt").hidden = true
+}
+
+function disableCookies() {
+    cookiesEnabled = false
+    localStorage.clear()
+    document.getElementById("cookiePrompt").hidden = true
 }

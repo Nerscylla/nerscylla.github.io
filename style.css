@@ -283,6 +283,14 @@ nav>a:hover::after {
     }
 }
 
+#cookiePrompt {
+    margin-top: 10vh;
+}
+
+#removeCookies {
+    margin-top: 50vh;
+}
+
 #project-01-dot { grid-area: rps-py-dot;}
 #project-02-dot { grid-area: rps-cpp-dot;}
 #project-03-dot { grid-area: startpage-dot;}
