@@ -1,9 +1,11 @@
 const learningID = setInterval(updateLearning, 1000)
+const updateCookiesID = setInterval(updateCookies, 1000)
 let currentLearning = 0
 let lightModeActive = localStorage.getItem("lightModeActive")
 let cookiesEnabled = localStorage.getItem("cookiesEnabled")
 
 function init() {
+    document.getElementById("storedCookies").hidden = true
     document.getElementById("cookiePrompt").hidden = true
     if(cookiesEnabled) {
         if(lightModeActive % 2 == 1) {
@@ -50,4 +52,13 @@ function disableCookies() {
     cookiesEnabled = false
     localStorage.clear()
     document.getElementById("cookiePrompt").hidden = true
+}
+
+function updateCookies() {
+    if(localStorage.getItem("cookiesEnabled")) {
+        document.getElementById("storedCookies").hidden = false
+        document.getElementById("storedCookies").innerHTML = "Light Mode Active: " + localStorage.getItem("lightModeActive") + " Cookies enabled: " + localStorage.getItem("cookiesEnabled")
+    } else {
+        document.getElementById("storedCookies").hidden = true
+    }
 }

@@ -291,6 +291,16 @@ nav>a:hover::after {
     margin-top: 50vh;
 }
 
+#storedCookies {
+    color: var(--text-color);
+    font-size: 2vh;
+}
+
+#about {
+    height: 100vh;
+    width: 100vw;
+}
+
 #project-01-dot { grid-area: rps-py-dot;}
 #project-02-dot { grid-area: rps-cpp-dot;}
 #project-03-dot { grid-area: startpage-dot;}
