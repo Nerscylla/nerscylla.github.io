@@ -109,7 +109,7 @@ nav>a:hover::after {
 }
 
 #greeting-container {
-    position: relative;
+    position: absolute;
     display: grid;
     gap: 0.2vh;
     text-align: right;
@@ -284,14 +284,46 @@ nav>a:hover::after {
 }
 
 #cookiePrompt {
-    margin-top: 10vh;
+    height: 100vh;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-bg-color);
+    z-index: 1000000;
+    display: grid;
+    grid-template-areas:
+    'empty0 empty0 empty0 empty0 empty0'
+    'empty1 empty1 label empty2 empty2'
+    'empty3 allow empty4 deny empty5'
+    'empty6 empty6 empty6 empty6 empty6';
+    gap: 10px;
+    text-align: center;
+}
+
+#cookiePromptLabel {
+    color: var(--text-color);
+    font-size: 3vh;
+}
+
+#enableCookies, #disableCookies {
+    border: var(--lighter-secondary-bg-color) 1vh solid;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    border-radius: 1vh;
+    font-size: 2.5vh;
 }
 
 #removeCookies {
+    position: absolute;
     margin-top: 50vh;
 }
 
 #storedCookies {
+    position: absolute;
+    margin-top: 40vh;
     color: var(--text-color);
     font-size: 2vh;
 }
@@ -310,3 +342,7 @@ nav>a:hover::after {
 #project-02-link { grid-area: rps-cpp;}
 #project-03-link { grid-area: startpage;}
 #project-04-link { grid-area: website;}
+
+#cookiePromptLabel { grid-area: label;}
+#enableCookies { grid-area: allow;}
+#disableCookies { grid-area: deny;}

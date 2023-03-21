@@ -13,8 +13,17 @@ function init() {
         } else {
             document.querySelector(":root").classList.add("not-light")
         }
+        document.getElementById("cookiePrompt").style.zIndex = -1
+        document.getElementById("enableCookies").hidden = true
+        document.getElementById("disableCookies").hidden = true
+        document.getElementById("cookiePromptLabel").hidden = true
+        document.getElementById("removeCookies").hidden = false
     } else {
-        document.getElementById("cookiePrompt").hidden = false
+        document.getElementById("cookiePrompt").style.zIndex = 1000000
+        document.getElementById("enableCookies").hidden = false
+        document.getElementById("disableCookies").hidden = false
+        document.getElementById("cookiePromptLabel").hidden = false
+        document.getElementById("removeCookies").hidden = true
     }
 }
 
@@ -45,19 +54,26 @@ function toggleLightmode() {
 function enableCookies() {
     cookiesEnabled = true
     localStorage.setItem("cookiesEnabled", true)
-    document.getElementById("cookiePrompt").hidden = true
+    document.getElementById("cookiePrompt").style.zIndex = -1
+    document.getElementById("enableCookies").hidden = true
+    document.getElementById("disableCookies").hidden = true
+    document.getElementById("cookiePromptLabel").hidden = true
+    localStorage.setItem("lightModeActive", 0)
 }
 
 function disableCookies() {
     cookiesEnabled = false
     localStorage.clear()
-    document.getElementById("cookiePrompt").hidden = true
+    document.getElementById("cookiePrompt").style.zIndex = -1
+    document.getElementById("enableCookies").hidden = true
+    document.getElementById("disableCookies").hidden = true
+    document.getElementById("cookiePromptLabel").hidden = true
 }
 
 function updateCookies() {
     if(localStorage.getItem("cookiesEnabled")) {
         document.getElementById("storedCookies").hidden = false
-        document.getElementById("storedCookies").innerHTML = "Light Mode Active: " + localStorage.getItem("lightModeActive") + " Cookies enabled: " + localStorage.getItem("cookiesEnabled")
+        document.getElementById("storedCookies").innerHTML = "Light Mode Active: " + localStorage.getItem("lightModeActive") + ", Cookies enabled: " + localStorage.getItem("cookiesEnabled")
     } else {
         document.getElementById("storedCookies").hidden = true
     }
