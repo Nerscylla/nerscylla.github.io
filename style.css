@@ -36,7 +36,7 @@ nav {
     gap: 1vw;
     grid-template-areas: 
     'home links projects about appearance';
-    position: sticky;
+    position: fixed;
     top: 1vh;
     left: 5vw;
     z-index: 1000;
@@ -106,6 +106,9 @@ nav>a:hover::after {
 #home {
     height: 80vh;
     width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #greeting-container {
@@ -113,8 +116,8 @@ nav>a:hover::after {
     display: grid;
     gap: 0.2vh;
     text-align: right;
-    width: 90vw;
     top: 50vh;
+    width: 90vw;
     transform: translateY(-50%);
 }
 
@@ -228,9 +231,11 @@ nav>a:hover::after {
 }
 
 #gh-contribs-label {
+    position: absolute;
     color: var(--text-color);
     font-size: 1vh;
     left: 50vw;
+    transform: translate(-50%, 0);
 }
 
 #projects {
