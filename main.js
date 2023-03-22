@@ -10,8 +10,10 @@ function init() {
     if(cookiesEnabled) {
         if(lightModeActive % 2 == 1) {
             document.querySelector(":root").classList.add("light")
+            document.getElementById("gh-contribs").style.filter = "invert(0)"
         } else {
             document.querySelector(":root").classList.add("not-light")
+            document.getElementById("gh-contribs").style.filter = "invert(1)"
         }
         document.getElementById("cookiePrompt").style.zIndex = -1
         document.getElementById("enableCookies").hidden = true
@@ -45,8 +47,10 @@ function toggleLightmode() {
         localStorage.setItem("lightModeActive", lightModeActive)
         if(lightModeActive % 2 == 1) {
             document.getElementById("appearance").setAttribute("name", "moon")
+            document.getElementById("gh-contribs").style.filter = "invert(0)"
         } else {
             document.getElementById("appearance").setAttribute("name", "sunny")
+            document.getElementById("gh-contribs").style.filter = "invert(1)"
         }
     }
 }

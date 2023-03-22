@@ -159,10 +159,11 @@ nav>a:hover::after {
 }
 
 #links {
-    position: relative;
-    padding-top: 20vh;
+    position: absolute;
     height: 25vh;
     width: 100vh;
+    top: 100vh;
+    padding-top: 20vh;
 }
 
 .social-links {
@@ -210,17 +211,35 @@ nav>a:hover::after {
 }
 
 #scroll-down-links-container {
-    position: relative;
-    left: 42.5vw;
-    top: -2vh;
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+    top: 50vh;
+}
+
+#gh-contribs {
+    height: 10vh;
+    width: 75vw;
+    position: absolute;
+    left: 12.5vw;
+    filter: invert(1);
+    transition: 500ms;
+    top: 35vh;
+}
+
+#gh-contribs-label {
+    color: var(--text-color);
+    font-size: 1vh;
+    left: 50vw;
 }
 
 #projects {
-    position: relative;
-    top: 25vh;
+    position: absolute;
+    top: 170vh;
     height: 80vh;
     width: 100vw;
     display: grid;
+    margin-top: 10vh;
     grid-template-areas: 
     'website website-dot empty1'
     'empty2 startpage-dot startpage'
@@ -267,7 +286,7 @@ nav>a:hover::after {
     width: 4vw;
     border-radius: 2vw;
     background-color: var(--lighter-secondary-bg-color);
-    z-index: 1000;
+    z-index: 100;
     transform: translateY(3vh);
 }
 
@@ -317,20 +336,20 @@ nav>a:hover::after {
 }
 
 #removeCookies {
-    position: absolute;
-    margin-top: 50vh;
+    position: relative;
 }
 
 #storedCookies {
-    position: absolute;
-    margin-top: 40vh;
+    position: relative;
     color: var(--text-color);
     font-size: 2vh;
 }
 
 #about {
-    height: 100vh;
+    position: absolute;
+    height: 30vh;
     width: 100vw;
+    top: 300vh;
 }
 
 #project-01-dot { grid-area: rps-py-dot;}
