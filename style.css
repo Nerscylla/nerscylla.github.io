@@ -342,12 +342,23 @@ nav>a:hover::after {
 
 #removeCookies {
     position: relative;
+    border: 3px var(--lighter-secondary-bg-color) solid;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 5px;
 }
 
 #storedCookies {
-    position: relative;
+    position: absolute;
     color: var(--text-color);
     font-size: 2vh;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#storedCookiesContainer {
+    text-align: center;
 }
 
 #about {
@@ -355,6 +366,11 @@ nav>a:hover::after {
     height: 30vh;
     width: 100vw;
     top: 300vh;
+    display: grid;
+    grid-template-areas: 
+    'empty1 empty1 empty1 empty1'
+    'empty2 btn text empty3'
+    'empty4 empty4 empty4 empty4';
 }
 
 #project-01-dot { grid-area: rps-py-dot;}
@@ -370,3 +386,6 @@ nav>a:hover::after {
 #cookiePromptLabel { grid-area: label;}
 #enableCookies { grid-area: allow;}
 #disableCookies { grid-area: deny;}
+
+#removeCookies { grid-area: btn;}
+#storedCookiesContainer { grid-area: text;}
