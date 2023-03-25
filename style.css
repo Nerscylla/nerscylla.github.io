@@ -240,16 +240,16 @@ nav>a:hover::after {
 
 #projects {
     position: absolute;
-    top: 170vh;
-    height: 80vh;
+    top: 150vh;
+    padding-top: 20vh;
+    height: 50vh;
     width: 100vw;
     display: grid;
     margin-top: 10vh;
     grid-template-areas: 
-    'website website-dot empty1'
-    'empty2 startpage-dot startpage'
-    'rps-cpp rps-cpp-dot empty3'
-    'empty4 rps-py-dot rps-py';
+    'website website-dot server-name-generator'
+    'dip-switch-calculator startpage-dot startpage'
+    'rps-cpp rps-dot rps-py';
 }
 
 .project-link {
@@ -278,11 +278,11 @@ nav>a:hover::after {
 #projects-timeline {
     position: absolute;
     background-color: var(--secondary-bg-color);
-    height: 80vh;
+    height: 50vh;
     width: 2.5vw;
     border-radius: 1.25vw;
     left: 50vw;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 20vh);
     border-top: var(--secondary-bg-color) 2vh solid;
 }
 
@@ -365,7 +365,7 @@ nav>a:hover::after {
     position: absolute;
     height: 30vh;
     width: 100vw;
-    top: 300vh;
+    top: 250vh;
     display: grid;
     grid-template-areas: 
     'empty1 empty1 empty1 empty1'
@@ -373,15 +373,15 @@ nav>a:hover::after {
     'empty4 empty4 empty4 empty4';
 }
 
-#project-01-dot { grid-area: rps-py-dot;}
-#project-02-dot { grid-area: rps-cpp-dot;}
-#project-03-dot { grid-area: startpage-dot;}
-#project-04-dot { grid-area: website-dot;}
+#project-01-dot { grid-area: website-dot;}
+#project-02-dot { grid-area: startpage-dot;}
+#project-03-dot { grid-area: rps-dot;}
 
 #project-01-link { grid-area: rps-py;}
 #project-02-link { grid-area: rps-cpp;}
 #project-03-link { grid-area: startpage;}
 #project-04-link { grid-area: website;}
+#project-05-link { grid-area: dip-switch-calculator;}
 
 #cookiePromptLabel { grid-area: label;}
 #enableCookies { grid-area: allow;}
