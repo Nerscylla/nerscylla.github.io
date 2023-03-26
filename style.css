@@ -239,7 +239,7 @@ nav>a:hover::after {
     margin-left: 25vw;
     margin-right: 25vw;
     position: absolute;
-    top: 160vh;
+    top: 170vh;
 }
 
 #chuck-joke-container {
@@ -265,7 +265,7 @@ nav>a:hover::after {
 
 #projects {
     position: absolute;
-    top: 150vh;
+    top: 180vh;
     padding-top: 20vh;
     height: 50vh;
     width: 100vw;
@@ -390,7 +390,7 @@ nav>a:hover::after {
     position: absolute;
     height: 30vh;
     width: 100vw;
-    top: 250vh;
+    top: 280vh;
     display: grid;
     grid-template-areas: 
     'empty1 empty1 empty1 empty1'
