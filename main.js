@@ -27,7 +27,57 @@ function init() {
         document.getElementById("cookiePromptLabel").hidden = false
         document.getElementById("removeCookies").hidden = true
     }
+    chuckJoke()
 }
+
+function chuckJoke() {
+    const chuckNorrisJoke = new XMLHttpRequest()
+    chuckNorrisJoke.open("GET", "https://api.chucknorris.io/jokes/random")
+    chuckNorrisJoke.send()
+    chuckNorrisJoke.responseType = "json"
+    chuckNorrisJoke.onload = () => {
+        if(chuckNorrisJoke.status == 200) {
+            document.getElementById("chuck-joke").innerHTML = chuckNorrisJoke.response.value
+        } else {
+            document.getElementById("chuck-joke").innerHTML = "API cant be reached for some reson :("
+        }
+    }
+}
+
+/* random collection of api requests and links if I ever want to use them:
+http://jservice.io/
+https://alexwohlbruck.github.io/cat-facts/
+https://api.adviceslip.com/
+http://www.boredapi.com/
+
+function numberFact() {
+    const randomNumberFact = new XMLHttpRequest
+    randomNumberFact.open("GET", "http://numbersapi.com/random/trivia")
+    randomNumberFact.send()
+    randomNumberFact.responseType = "text"
+    randomNumberFact.onload = () => {
+        if(randomNumberFact.status == 200) {
+            return(randomNumberFact.response)
+        } else {
+            return("Sorry, but sadly the API can't be reached at the Moment :(")
+        }
+    }
+}
+
+function randomJoke() {
+    const randomJoke = new XMLHttpRequest
+    randomJoke.open("GET", "https://v2.jokeapi.dev/joke/Any?format=txt&type=single")
+    randomJoke.send()
+    randomJoke.responseType = "text"
+    randomJoke.onload = () => {
+        if(randomJoke.status == 200) {
+            return(randomJoke.response)
+        } else {
+            return("Sorry, but sadly the API can't be reached at the Moment :(")
+        }
+    }
+}
+*/
 
 function updateLearning() {
     let learning = ["Web Development", "Blender", "Linux", "Docker"]

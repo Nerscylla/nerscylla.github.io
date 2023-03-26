@@ -98,11 +98,6 @@ nav>a:hover::after {
     filter: invert(1);
 }
 
-#home-link-nav { grid-area: home;}
-#links-link-nav { grid-area: links;}
-#projects-link-nav { grid-area: projects;}
-#about-link-nav { grid-area: about;}
-
 #home {
     height: 80vh;
     width: 100vw;
@@ -236,6 +231,36 @@ nav>a:hover::after {
     font-size: 1vh;
     left: 50vw;
     transform: translate(-50%, 0);
+}
+
+#chuck-joke-section {
+    width: 50vw;
+    height: fit-content;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    position: absolute;
+    top: 160vh;
+}
+
+#chuck-joke-container {
+    position: absolute;
+    text-align: center;
+    width: calc(50vw - 20px);
+    height: fit-content;
+    background-color: var(--secondary-bg-color);
+    border: var(--secondary-bg-color) 10px solid;
+    border-radius: 10px;
+    padding-bottom: 2.5vh;
+}
+
+#chuck-joke {
+    position: relative;
+    top: 2.5vh;
+}
+
+#chuck-joke-container>label {
+    color: var(--text-color);
+    font-size: 1.5vh;
 }
 
 #projects {
@@ -389,3 +414,8 @@ nav>a:hover::after {
 
 #removeCookies { grid-area: btn;}
 #storedCookiesContainer { grid-area: text;}
+
+#home-link-nav { grid-area: home;}
+#links-link-nav { grid-area: links;}
+#projects-link-nav { grid-area: projects;}
+#about-link-nav { grid-area: about;}
