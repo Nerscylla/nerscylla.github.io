@@ -47,7 +47,6 @@ function chuckJoke() {
 /* random collection of api requests and links if I ever want to use them:
 http://jservice.io/
 https://alexwohlbruck.github.io/cat-facts/
-https://api.adviceslip.com/
 http://www.boredapi.com/
 
 function numberFact() {
@@ -72,6 +71,21 @@ function randomJoke() {
     randomJoke.onload = () => {
         if(randomJoke.status == 200) {
             return(randomJoke.response)
+        } else {
+            return("Sorry, but sadly the API can't be reached at the Moment :(")
+        }
+    }
+}
+
+function randomAdvice() {
+    const randomAdvice = new XMLHttpRequest()
+    randomAdvice.open("GET", "https://api.adviceslip.com/advice")
+    randomAdvice.send()
+    randomAdvice.responseType = "json"
+    randomAdvice.onload = () => {
+        if(randomAdvice.status == 200) {
+            let returnArray = [randomAdvice.response.slip.advice, "api.adviceslip.com/advice/" + randomAdvice.response.slip.id]
+            return(returnArray)
         } else {
             return("Sorry, but sadly the API can't be reached at the Moment :(")
         }
