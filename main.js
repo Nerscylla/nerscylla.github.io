@@ -47,7 +47,8 @@ function chuckJoke() {
 /* random collection of api requests and links if I ever want to use them:
 http://jservice.io/
 https://alexwohlbruck.github.io/cat-facts/
-http://www.boredapi.com/
+http://www.boredapi.com/api/activity
+https://www.boredapi.com/api/activity?price=0
 
 function numberFact() {
     const randomNumberFact = new XMLHttpRequest
