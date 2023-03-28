@@ -236,12 +236,13 @@ nav>a:hover::after {
 #api-section {
     text-align: center;
     width: 50vw;
-    height: 20vh;
+    height: 25vh;
     margin-left: 25vw;
     margin-right: 25vw;
     position: absolute;
     top: 170vh;
     display: grid;
+    gap: 1vh;
     grid-template-areas: 
     'api api api api api api api'
     'api api api api api api api'
@@ -257,6 +258,7 @@ nav>a:hover::after {
     padding-bottom: 2.5vh;
     grid-area: api;
     display: grid;
+    gap: 1vh;
     grid-template-areas: 
     'empty1 heading heading heading empty2'
     'empty1 out out out empty2';
@@ -266,6 +268,13 @@ nav>a:hover::after {
 #api-container>label {
     color: var(--text-color);
     font-size: 1.5vh;
+}
+
+.api-select-button {
+    color: var(--text-color);
+    background-color: var(--secondary-bg-color);
+    border: 0.25vh var(--lighter-secondary-bg-color) solid;
+    border-radius: 0.5vh;
 }
 
 #projects {

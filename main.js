@@ -38,6 +38,7 @@ function chuckJoke() {
     xhr.onload = () => {
         if(xhr.status == 200) {
             document.getElementById("api").innerHTML = xhr.response.value
+            document.getElementById("api-heading").innerHTML = "Random Chuck Norris joke for funsies and learning how to make API Requests:"
         } else {
             document.getElementById("api").innerHTML = "API cant be reached for some reson :("
         }
@@ -57,7 +58,8 @@ function numberFact() {
     xhr.responseType = "text"
     xhr.onload = () => {
         if(xhr.status == 200) {
-            document.getElementById("api").innerHTML = xhr.response.value
+            document.getElementById("api").innerHTML = xhr.response
+            document.getElementById("api-heading").innerHTML = "Random number Fact for funsies and learning how to make API Requests:"
         } else {
             document.getElementById("api").innerHTML = "API cant be reached for some reson :("
         }
@@ -71,7 +73,8 @@ function randomJoke() {
     xhr.responseType = "text"
     xhr.onload = () => {
         if(xhr.status == 200) {
-            document.getElementById("api").innerHTML = xhr.response.value
+            document.getElementById("api").innerHTML = xhr.response
+            document.getElementById("api-heading").innerHTML = "Random joke for funsies and learning how to make API Requests:"
         } else {
             document.getElementById("api").innerHTML = "API cant be reached for some reson :("
         }
@@ -85,7 +88,8 @@ function randomAdvice() {
     xhr.responseType = "json"
     xhr.onload = () => {
         if(xhr.status == 200) {
-            document.getElementById("api").innerHTML = xhr.response.value
+            document.getElementById("api").innerHTML = xhr.response.slip.advice
+            document.getElementById("api-heading").innerHTML = "Random life advice for funsies and learning how to make API Requests:"
         } else {
             document.getElementById("api").innerHTML = "API cant be reached for some reson :("
         }
