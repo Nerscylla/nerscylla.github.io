@@ -31,68 +31,66 @@ function init() {
 }
 
 function chuckJoke() {
-    const chuckNorrisJoke = new XMLHttpRequest()
-    chuckNorrisJoke.open("GET", "https://api.chucknorris.io/jokes/random")
-    chuckNorrisJoke.send()
-    chuckNorrisJoke.responseType = "json"
-    chuckNorrisJoke.onload = () => {
-        if(chuckNorrisJoke.status == 200) {
-            document.getElementById("chuck-joke").innerHTML = chuckNorrisJoke.response.value
+    const xhr = new XMLHttpRequest()
+    xhr.open("GET", "https://api.chucknorris.io/jokes/random")
+    xhr.send()
+    xhr.responseType = "json"
+    xhr.onload = () => {
+        if(xhr.status == 200) {
+            document.getElementById("api").innerHTML = xhr.response.value
         } else {
-            document.getElementById("chuck-joke").innerHTML = "API cant be reached for some reson :("
+            document.getElementById("api").innerHTML = "API cant be reached for some reson :("
         }
     }
 }
 
-/* random collection of api requests and links if I ever want to use them:
+/* random collection of api links if I ever want to use them:
 http://jservice.io/
-https://alexwohlbruck.github.io/cat-facts/
 http://www.boredapi.com/api/activity
 https://www.boredapi.com/api/activity?price=0
+*/
 
 function numberFact() {
-    const randomNumberFact = new XMLHttpRequest
-    randomNumberFact.open("GET", "http://numbersapi.com/random/trivia")
-    randomNumberFact.send()
-    randomNumberFact.responseType = "text"
-    randomNumberFact.onload = () => {
-        if(randomNumberFact.status == 200) {
-            return(randomNumberFact.response)
+    const xhr = new XMLHttpRequest
+    xhr.open("GET", "http://numbersapi.com/random/trivia")
+    xhr.send()
+    xhr.responseType = "text"
+    xhr.onload = () => {
+        if(xhr.status == 200) {
+            document.getElementById("api").innerHTML = xhr.response.value
         } else {
-            return("Sorry, but sadly the API can't be reached at the Moment :(")
+            document.getElementById("api").innerHTML = "API cant be reached for some reson :("
         }
     }
 }
 
 function randomJoke() {
-    const randomJoke = new XMLHttpRequest
-    randomJoke.open("GET", "https://v2.jokeapi.dev/joke/Any?format=txt&type=single")
-    randomJoke.send()
-    randomJoke.responseType = "text"
-    randomJoke.onload = () => {
-        if(randomJoke.status == 200) {
-            return(randomJoke.response)
+    const xhr = new XMLHttpRequest
+    xhr.open("GET", "https://v2.jokeapi.dev/joke/Any?format=txt&type=single")
+    xhr.send()
+    xhr.responseType = "text"
+    xhr.onload = () => {
+        if(xhr.status == 200) {
+            document.getElementById("api").innerHTML = xhr.response.value
         } else {
-            return("Sorry, but sadly the API can't be reached at the Moment :(")
+            document.getElementById("api").innerHTML = "API cant be reached for some reson :("
         }
     }
 }
 
 function randomAdvice() {
-    const randomAdvice = new XMLHttpRequest()
-    randomAdvice.open("GET", "https://api.adviceslip.com/advice")
-    randomAdvice.send()
-    randomAdvice.responseType = "json"
-    randomAdvice.onload = () => {
-        if(randomAdvice.status == 200) {
-            let returnArray = [randomAdvice.response.slip.advice, "api.adviceslip.com/advice/" + randomAdvice.response.slip.id]
-            return(returnArray)
+    const xhr = new XMLHttpRequest()
+    xhr.open("GET", "https://api.adviceslip.com/advice")
+    xhr.send()
+    xhr.responseType = "json"
+    xhr.onload = () => {
+        if(xhr.status == 200) {
+            document.getElementById("api").innerHTML = xhr.response.value
         } else {
-            return("Sorry, but sadly the API can't be reached at the Moment :(")
+            document.getElementById("api").innerHTML = "API cant be reached for some reson :("
         }
     }
 }
-*/
 
 function updateLearning() {
     let learning = ["Web Development", "Blender", "Linux", "Docker"]

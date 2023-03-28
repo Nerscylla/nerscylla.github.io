@@ -233,32 +233,37 @@ nav>a:hover::after {
     transform: translate(-50%, 0);
 }
 
-#chuck-joke-section {
+#api-section {
+    text-align: center;
     width: 50vw;
-    height: fit-content;
+    height: 20vh;
     margin-left: 25vw;
     margin-right: 25vw;
     position: absolute;
     top: 170vh;
+    display: grid;
+    grid-template-areas: 
+    'api api api api api api api'
+    'api api api api api api api'
+    'btn1 btn2 btn3 btn4 btn5 btn6 btn7';
 }
 
-#chuck-joke-container {
-    position: absolute;
+#api-container {
     text-align: center;
-    width: calc(50vw - 20px);
     height: fit-content;
     background-color: var(--secondary-bg-color);
     border: var(--secondary-bg-color) 10px solid;
     border-radius: 10px;
     padding-bottom: 2.5vh;
+    grid-area: api;
+    display: grid;
+    grid-template-areas: 
+    'empty1 heading heading heading empty2'
+    'empty1 out out out empty2';
 }
 
-#chuck-joke {
-    position: relative;
-    top: 2.5vh;
-}
 
-#chuck-joke-container>label {
+#api-container>label {
     color: var(--text-color);
     font-size: 1.5vh;
 }
@@ -397,6 +402,9 @@ nav>a:hover::after {
     'empty2 btn text empty3'
     'empty4 empty4 empty4 empty4';
 }
+
+#api { grid-area: out;}
+#api-heading { grid-area: heading;}
 
 #project-01-dot { grid-area: website-dot;}
 #project-02-dot { grid-area: startpage-dot;}
