@@ -424,6 +424,7 @@ nav>a:hover::after {
 #project-03-link { grid-area: startpage;}
 #project-04-link { grid-area: website;}
 #project-05-link { grid-area: dip-switch-calculator;}
+#project-06-link { grid-area: js-todo;}
 
 #cookiePromptLabel { grid-area: label;}
 #enableCookies { grid-area: allow;}
