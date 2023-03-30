@@ -1,8 +1,8 @@
 const learningID = setInterval(updateLearning, 1000)
 const updateCookiesID = setInterval(updateCookies, 1000)
 let currentLearning = 0
-let lightModeActive = localStorage.getItem("lightModeActive")
-let cookiesEnabled = localStorage.getItem("cookiesEnabled")
+let lightModeActive = localStorage.getItem("website:lightModeActive")
+let cookiesEnabled = localStorage.getItem("website:cookiesEnabled")
 
 function init() {
     document.getElementById("storedCookies").hidden = true
@@ -124,17 +124,18 @@ function toggleLightmode() {
 
 function enableCookies() {
     cookiesEnabled = true
-    localStorage.setItem("cookiesEnabled", true)
+    localStorage.setItem("website:cookiesEnabled", true)
     document.getElementById("cookiePrompt").style.zIndex = -1
     document.getElementById("enableCookies").hidden = true
     document.getElementById("disableCookies").hidden = true
     document.getElementById("cookiePromptLabel").hidden = true
-    localStorage.setItem("lightModeActive", 0)
+    localStorage.setItem("website:lightModeActive", 0)
 }
 
 function disableCookies() {
     cookiesEnabled = false
-    localStorage.clear()
+    localStorage.removeItem("website:cookiesEnabled")
+    localStorage.removeItem("website:lightModeActive")
     document.getElementById("cookiePrompt").style.zIndex = -1
     document.getElementById("enableCookies").hidden = true
     document.getElementById("disableCookies").hidden = true
@@ -142,7 +143,7 @@ function disableCookies() {
 }
 
 function updateCookies() {
-    if(localStorage.getItem("cookiesEnabled")) {
+    if(localStorage.getItem("website:cookiesEnabled")) {
         document.getElementById("storedCookies").hidden = false
         document.getElementById("storedCookies").innerHTML = "Light Mode Active: " + localStorage.getItem("lightModeActive") + ", Cookies enabled: " + localStorage.getItem("cookiesEnabled")
     } else {
