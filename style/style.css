@@ -1,0 +1,31 @@
+:root {
+    --main-bg-color: #2B3D41;
+    --secondary-bg-color: #4C5F6B;
+    --text-color: #E0E2DB;
+    --highlight-color: #A37774;
+    --lighter-secondary-bg-color: #5B6F7A;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: 500ms;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.sections {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+label {
+    color: var(--text-color);
+}
+
+#section0{ background-color: var(--main-bg-color);}
+#section1{ background-color: var(--main-bg-color);}
+#section2{ background-color: var(--main-bg-color);}
+#section3{ background-color: var(--main-bg-color);}
+#section4{ background-color: var(--main-bg-color);}
