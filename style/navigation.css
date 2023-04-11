@@ -17,6 +17,7 @@
     padding: 1vh;
     border-radius: 1vh;
     z-index: 1000;
+    height: fit-content;
 }
 
 #next-button {
@@ -39,13 +40,13 @@
     transform: scale(2) translate(-25%, -25%);
 }
 
-a {
+nav>a {
     text-decoration: none;
     color: var(--text-color);
     font-size: 2vh;
 }
 
-a::after {
+nav>a::after {
     content: "";
     display: block;
     height: 10px;
