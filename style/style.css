@@ -16,8 +16,9 @@ body {
 
 .sections {
     position: absolute;
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
+    transition: 500ms;
 }
 
 label {

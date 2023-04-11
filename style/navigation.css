@@ -16,6 +16,7 @@
     text-align: center;
     padding: 1vh;
     border-radius: 1vh;
+    z-index: 1000;
 }
 
 a {
