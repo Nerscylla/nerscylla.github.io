@@ -4,145 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The_Baums Website</title>
+    <title>The_Baum's personal Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
-<body onload="init()">
-    <nav>
-        <a id="home-link-nav" href="#home">Home</a>
-        <a id="links-link-nav" href="#links">Links</a>
-        <a id="projects-link-nav" href="#projects">Projects</a>
-        <a id="about-link-nav" href="#about">About</a>
-        <button id="togleLightmode" onclick="toggleLightmode()">
-            <ion-icon id="appearance" name="sunny"></ion-icon>
-        </button>
-    </nav>
-    <div id="cookiePrompt">
-        <label id="cookiePromptLabel">Accept the use of cookies?</label>
-        <button id="enableCookies" onclick="enableCookies()">Allow cookies</button>
-        <button id="disableCookies" onclick="disableCookies()">Deny cookies</button>
-    </div>
-    <section id="home">
-        <div id="greeting-container">
-            <label class="greeting" id="greeting1">Hello,</label>
-            <label class="greeting" id="greeting2">I am</label>
-            <label class="greeting" id="greeting3">The_Baum</label>
-            <label class="greeting" id="greeting4">I am a student learning</label>
-            <label class="greeting" id="greeting5"></label>
-        </div>
-        <div id="scroll-down-greetings-container" class="scroll-down-container">
-            <a href="#links" id="scroll-down-greetings" class="scroll-down-button">Go Down</a>
-        </div>
-    </section>
-    <section id="links">
-        <div id="social-links-container">
-            <a href="https://www.youtube.com/channel/UCvKre5GLBJHx5u3DgcW3Y_A" target="_blank">
-                <ion-icon name="logo-youtube" class="social-links"></ion-icon>
-            </a>
-            <a href="https://github.com/TheBaum123" target="_blank">
-                <ion-icon name="logo-github" class="social-links"></ion-icon>
-            </a>
-            <a href="https://twitter.com/the_baum123" target="_blank">
-                <ion-icon name="logo-twitter" class="social-links"></ion-icon>
-            </a>
-        </div>
-        <label id="gh-contribs-label">Github contributions:</label>
-        <img src="https://ghchart.rshah.org/C010B0/thebaum123" alt="The_Baum's Github chart" id="gh-contribs">
-        <div id="scroll-down-links-container" class="scroll-down-container">
-            <a href="#projects" id="scroll-down-links" class="scroll-down-button">Go Down</a>
-        </div>
-    </section>
-    <section id="api-section">
-        <div id="api-container">
-            <label id="api-heading">Random Chuck Norris joke for funsies and learning how to make API Requests:</label>
-            <br>
-            <label id="api"></label>
-        </div>
-        <button class="api-select-button" id="api01select-button" onclick="randomJoke()">Random Joke</button>
-        <button class="api-select-button" id="api02select-button" onclick="chuckJoke()">Chuck Norris Joke</button>
-        <button class="api-select-button" id="api03select-button" onclick="numberFact()">Number Fact</button>
-        <button class="api-select-button" id="api04select-button" onclick="randomAdvice()">Random Advice</button>
-        <button class="api-select-button" id="api05select-button">Random Free Activity</button>
-        <button class="api-select-button" id="api06select-button">Random Trivia question</button>
-    </section>
-    <section id="projects">
-        <div id="projects-timeline"></div>
-        <div class="timeline-dots" id="project-01-dot"></div>
-        <div class="timeline-dots" id="project-02-dot"></div>
-        <div class="timeline-dots" id="project-03-dot"></div>
-        <a href="https://github.com/TheBaum123/rock-paper-scissors.py" class="project-link" id="project-01-link">
-            <div class="project-container" id="project-01-container">
-                <div class="project-title" id="project-01-title">
-                    <label class="project-title-label" id="project-01-title-label">rock-paper-scissors.py</label>
-                </div>
-                <div class="poject-description" id="project-01-description">
-                    <label class="project-description-label" id="project-01-description-label">My first ever really code that i wrote without any help. Not really proud, but i guess everyone starts somewhere.</label>
-                </div>
-            </div>
-        </a>
-        <a href="https://github.com/TheBaum123/rock-paper-scissors.cpp" class="project-link" id="project-02-link">
-            <div class="project-container" id="project-02-container">
-                <div class="project-title" id="project-02-title">
-                    <label class="project-title-label" id="project-02-title-label">rock-paper-scissors.cpp</label>
-                </div>
-                <div class="poject-description" id="project-02-description">
-                    <label class="project-description-label" id="project-02-description-label">This is an old project, which I found on my hard drive, so I put it here.</label>
-                </div>
-            </div>
-        </a>
-        <a href="https://github.com/TheBaum123/custom-startpage" class="project-link" id="project-03-link">
-            <div class="project-container" id="project-03-container">
-                <div class="project-title" id="project-03-title">
-                    <label class="project-title-label" id="project-03-title-label">custom-startpage</label>
-                </div>
-                <div class="poject-description" id="project-03-description">
-                    <label class="project-description-label" id="project-03-description-label">This github pages hosted custom startpage was originally only uploaded here so i wont have to habe a webserver for using my custom startpage on all browsers, but escalated from a reddit thread into one of my biggest side projects yet.</label>
-                </div>
-            </div>
-        </a>
-        <a href="https://github.com/TheBaum123/thebaum123.github.io" class="project-link" id="project-04-link">
-            <div class="project-container" id="project-04-container">
-                <div class="project-title" id="project-04-title">
-                    <label class="project-title-label" id="project-04-title-label">TheBaum123.github.io</label>
-                </div>
-                <div class="poject-description" id="project-04-description">
-                    <label class="project-description-label" id="project-04-description-label">The source of the webpage you are on right now</label>
-                </div>
-            </div>
-        </a>
-        <a href="https://github.com/TheBaum123/dip-switch-calculator" class="project-link" id="project-05-link">
-            <div class="project-container" id="project-05-container">
-                <div class="project-title" id="project-05-title">
-                    <label class="project-title-label" id="project-05-title-label">dip-switch calculator</label>
-                </div>
-                <div class="poject-description" id="project-05-description">
-                    <label class="project-description-label" id="project-05-description-label">Calculates the position of dip switches on dmx devices for an dmx address</label>
-                </div>
-            </div>
-        </a>
-        <a href="https://github.com/TheBaum123/todo-app-vanilla-js" class="project-link" id="project-05-link">
-            <div class="project-container" id="project-06-container">
-                <div class="project-title" id="project-06-title">
-                    <label class="project-title-label" id="project-06-title-label">todo-app-vanilla-js</label>
-                </div>
-                <div class="poject-description" id="project-06-description">
-                    <label class="project-description-label" id="project-06-description-label">simple, minimal todo app made in vanilla javascript</label>
-                </div>
-            </div>
-        </a>
-    </section>
-    <section id="about">
-        <div id="storedCookiesContainer">
-            <label id="storedCookies"></label>
-        </div>
-        <button id="removeCookies" onclick="disableCookies()">Remove my stored Data</button>
-    </section>
+<body>
+    
     <script src="main.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
