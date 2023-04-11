@@ -1,0 +1,42 @@
+:root {
+    --main-bg-color: #2B3D41;
+    --secondary-bg-color: #4C5F6B;
+    --text-color: #E0E2DB;
+    --highlight-color: #A37774;
+    --lighter-secondary-bg-color: #5B6F7A;
+}
+
+#nav-bar {
+    position: relative;
+    background-color: var(--secondary-bg-color);
+    width: 90vw;
+    left: 4vw;
+    display: grid;
+    grid-auto-flow: column;
+    text-align: center;
+    padding: 1vh;
+    border-radius: 1vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 2vh;
+}
+
+a::after {
+    content: "";
+    display: block;
+    height: 10px;
+    background-color: var(--highlight-color);
+    border-radius: 5px;
+    width: 0;
+    transition: 500ms;
+    position: relative;
+    left: 50%;
+}
+
+a:hover::after {
+    width: 100%;
+    left: 0;
+}
