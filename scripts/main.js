@@ -25,6 +25,12 @@ function refreshSection() {
 function nextSection() {
     let nextSection = (parseInt(currentSection, 10) + 1) % sectionCount
     window.location.assign("#" + nextSection)
+    document.getElementById("next-button").style.transition = "100ms"
+    document.getElementById("next-button").style.transform = "translate(-50%, -50%)"
+    setTimeout(() => {
+        document.getElementById("next-button").style.transition = "250ms"
+        document.getElementById("next-button").style.transform = ""
+    }, 100);
 }
 
 window.addEventListener("hashchange", () => {

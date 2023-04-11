@@ -19,6 +19,26 @@
     z-index: 1000;
 }
 
+#next-button {
+    z-index: 1000;
+    position: absolute;
+    top: 90vh;
+    color: var(--text-color);
+    background-color: var(--secondary-bg-color);
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    border: none;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 2.5vh;
+    font-size: 4vh;
+    transition: 250ms;
+}
+
+#next-button:hover {
+    transform: scale(2) translate(-25%, -25%);
+}
+
 a {
     text-decoration: none;
     color: var(--text-color);
