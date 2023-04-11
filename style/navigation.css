@@ -22,7 +22,7 @@
 #next-button {
     z-index: 1000;
     position: absolute;
-    top: 90vh;
+    top: 80vh;
     color: var(--text-color);
     background-color: var(--secondary-bg-color);
     left: 50vw;

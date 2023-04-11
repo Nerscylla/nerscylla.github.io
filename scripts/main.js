@@ -14,6 +14,10 @@ document.body.removeChild(document.body.lastChild)
 refreshSection()
 
 function refreshSection() {
+    if(currentSection == undefined) {
+        window.location.assign("#0")
+        currentSection = 0
+    }
     for(let i = 0; i < sectionCount; i++) {
         document.getElementById("section" + i).style.transform = "translateY(-100%)"
         document.getElementById("section" + i).style.zIndex = "0"
