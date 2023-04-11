@@ -4,6 +4,7 @@
     width: 95vw;
     text-align: right;
     display: grid;
+    transform: translateY(-50%);
 }
 
 #section0>#greetings-container>label {
