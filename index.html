@@ -15,7 +15,7 @@
     <nav id="nav-bar">
         <a href="#0" id="section1link" class="link">Start</a>
         <a href="#1" id="section2link" class="link">Links</a>
-        <a href="#2" id="section3link" class="link">Section 3</a>
+        <a href="#2" id="section3link" class="link">Contact</a>
         <a href="#3" id="section4link" class="link">Section 4</a>
     </nav>
 
@@ -43,7 +43,11 @@
     </section>
 
     <section id="section2" class="sections" style="z-index: 1;">
-    
+        <form id="contact-form" action="https://contact-api-lwe8.onrender.com/new/" method="post">
+            <input type="email" name="email" autocomplete="email" placeholder="example@email.com" required>
+            <textarea name="message" placeholder="Hello, I wanted to reach out to you for..." required></textarea>
+            <input type="submit">
+        </form>
     </section>
 
     <section id="section3" class="sections" style="z-index: 1;">
