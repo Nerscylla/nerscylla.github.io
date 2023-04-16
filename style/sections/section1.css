@@ -1,0 +1,28 @@
+#link-container {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#link-container>a{
+    text-decoration: none;
+}
+
+#link-container>a>ion-icon {
+    font-size: 5vh;
+    color: var(--text-color);
+    margin: 2vw;
+    transition: 500ms;
+}
+
+#link-container:hover>a>ion-icon {
+    filter: blur(0.2vh) brightness(80%);
+}
+
+#link-container>a:hover>ion-icon {
+    transform: scale(1.5);
+    filter: blur(0);
+}

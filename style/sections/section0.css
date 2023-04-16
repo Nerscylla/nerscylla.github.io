@@ -1,0 +1,12 @@
+#section0>#greetings-container {
+    position: absolute;
+    top: 50vh;
+    width: 95vw;
+    text-align: right;
+    display: grid;
+    transform: translateY(-50%);
+}
+
+#section0>#greetings-container>label {
+    font-size: 3vh;
+}
