@@ -23,4 +23,13 @@
     background-color: var(--secondary-bg-color);
     border-radius: 1vh;
     text-align: center;
+    counter-increment: projects;
+}
+
+#projects-container>a>:first-child::before {
+    content: counter(projects) ". ";
+    display: inline;
+    position: absolute;
+    left: 2%;
+    font-size: 100%;
 }
