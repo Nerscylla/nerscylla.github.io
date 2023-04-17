@@ -11,8 +11,8 @@
     background-color: var(--secondary-bg-color);
     width: 90vw;
     left: 4vw;
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
     padding: 1vh;
     border-radius: 1vh;
