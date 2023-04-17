@@ -18,6 +18,10 @@ ionicon1.src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
 ionicon1.noModule = true
 document.body.appendChild(ionicon1)
 
+let changeSection = document.createElement("script")
+changeSection.src = "scripts/changeSections.js"
+document.body.appendChild(changeSection)
+
 for(let i = 0; i < sectionCount; i++) {
     style = document.createElement("link")
     style.rel = "stylesheet"

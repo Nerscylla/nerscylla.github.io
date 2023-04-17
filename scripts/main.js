@@ -1,7 +1,6 @@
 const sectionCount = document.getElementsByClassName("sections").length
 
 let currentSection = 0
-let lastSection = 0
 
 let currenLocation = String(window.location)
 currentSection = currenLocation.split("#")[1]
@@ -26,19 +25,7 @@ function refreshSection() {
     document.getElementById("section" + currentSection).style.zIndex = "10"
 }
 
-function nextSection() {
-    let nextSection = (parseInt(currentSection, 10) + 1) % sectionCount
-    window.location.assign("#" + nextSection)
-    document.getElementById("next-button").style.transition = "100ms"
-    document.getElementById("next-button").style.transform = "translate(-50%, -50%)"
-    setTimeout(() => {
-        document.getElementById("next-button").style.transition = "250ms"
-        document.getElementById("next-button").style.transform = ""
-    }, 100);
-}
-
 window.addEventListener("hashchange", () => {
-    lastSection = currentSection
     let currenLocation = String(window.location)
     currentSection = currenLocation.split("#")[1]
     refreshSection()
