@@ -1,0 +1,26 @@
+#projects-container {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1vh;
+    position: absolute;
+    top: 5vh;
+    width: calc(100% - 2vh);
+}
+
+#projects-container>a>:first-child {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+#projects-container>a>:last-child {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+#projects-container>a {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--secondary-bg-color);
+    border-radius: 1vh;
+    text-align: center;
+}

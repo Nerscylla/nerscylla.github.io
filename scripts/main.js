@@ -19,7 +19,7 @@ function refreshSection() {
         currentSection = 0
     }
     for(let i = 0; i < sectionCount; i++) {
-        document.getElementById("section" + i).style.transform = "translateY(-100%)"
+        document.getElementById("section" + i).style.transform = "translateY(-200%)"
         document.getElementById("section" + i).style.zIndex = "0"
     }
     document.getElementById("section" + currentSection).style.transform = "translateY(0)"
