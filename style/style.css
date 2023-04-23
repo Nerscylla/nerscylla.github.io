@@ -13,6 +13,7 @@ body {
     background-color: var(--main-bg-color);
     font-family: 'Roboto Mono', monospace;
     overflow: hidden;
+    margin: 0;
 }
 
 .sections {
@@ -24,6 +25,21 @@ body {
 
 label {
     color: var(--text-color);
+}
+
+footer {
+    z-index: 1000;
+    bottom: 0;
+    height: 5%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    align-items: center;
+    background-color: var(--secondary-bg-color);
+    width: 100%;
+    color: var(--text-color);
+    font-size: 1.5rem;
 }
 
 #section0{ background-color: var(--main-bg-color);}
