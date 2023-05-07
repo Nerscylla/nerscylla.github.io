@@ -26,7 +26,7 @@ function refreshSection() {
 }
 
 window.addEventListener("hashchange", () => {
-    let currenLocation = String(window.location)
-    currentSection = currenLocation.split("#")[1]
+    let currentLocation = String(window.location)
+    currentSection = currentLocation.split("#")[1]
     refreshSection()
 })
