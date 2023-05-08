@@ -43,6 +43,13 @@ footer {
     font-size: 1.5rem;
 }
 
+#progress-bar {
+    background-color: var(--highlight-color);
+    height: 1vh;
+    width: 100%;
+    z-index: 10000;
+}
+
 #section0{ background-color: var(--main-bg-color);}
 #section1{ background-color: var(--main-bg-color);}
 #section2{ background-color: var(--main-bg-color);}
