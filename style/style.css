@@ -21,7 +21,6 @@ body {
     position: absolute;
     height: 100vh;
     width: 100vw;
-    transition: 500ms;
 }
 
 label {
@@ -48,6 +47,15 @@ footer {
     height: 1vh;
     width: 100%;
     z-index: 10000;
+    margin-bottom: 1vh;
+    position: relative;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    #progress-bar,
+    .sections {
+        transition: 500ms;
+    }
 }
 
 #section0{ background-color: var(--main-bg-color);}

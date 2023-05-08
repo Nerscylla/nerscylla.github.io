@@ -35,6 +35,5 @@ function addProjects() {
 
 function randomStart() {
     const randomIndex = Math.floor((Math.random() * (repos.length - 3)) + 1)
-    console.log(randomIndex)
     return(randomIndex)
 }

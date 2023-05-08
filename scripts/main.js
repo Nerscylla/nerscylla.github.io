@@ -1,4 +1,6 @@
 const sectionCount = document.getElementsByClassName("sections").length
+let progressBar = document.getElementById("progress-bar")
+let progressPercentage = 0
 
 let currentSection = 0
 
@@ -9,6 +11,8 @@ let inject = document.createElement("script")
 inject.src = "scripts/inject.js"
 document.body.appendChild(inject)
 document.body.removeChild(document.body.lastChild)
+
+progressBar.style.width = 0
 
 refreshSection()
 
@@ -23,6 +27,8 @@ function refreshSection() {
     }
     document.getElementById("section" + currentSection).style.transform = "translateY(0)"
     document.getElementById("section" + currentSection).style.zIndex = "10"
+    progressPercentage = ((parseInt(currentSection) + 1) / (parseInt(sectionCount))) * 100
+    progressBar.style.width = `${progressPercentage}%`
 }
 
 window.addEventListener("hashchange", () => {
