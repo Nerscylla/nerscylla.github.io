@@ -27,7 +27,7 @@ function refreshSection() {
     }
     document.getElementById("section" + currentSection).style.transform = "translateY(0)"
     document.getElementById("section" + currentSection).style.zIndex = "10"
-    progressPercentage = ((parseInt(currentSection) + 1) / (parseInt(sectionCount))) * 100
+    progressPercentage = ((parseInt(currentSection) + ((parseInt(currentSection) + 1) / parseInt(sectionCount))) / (parseInt(sectionCount))) * 100
     progressBar.style.width = `${progressPercentage}%`
 }
 
