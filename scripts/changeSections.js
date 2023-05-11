@@ -30,16 +30,16 @@ document.addEventListener("wheel", (e) => {
     }
 })
 
-document.addEventListener("touchmove", (e) => {
-    if(new Date() - lastScrollTime < 750) {
+let touchDown = 0
+let touchUp = 0
 
-    } else {
-        if(lastTouch < e.changedTouches[0].clientY) {
-            nextSection()
-        } else if(lastTouch > e.changedTouches[0].clientY) {
-            lastSection()
-        }
-        lastScrollTime = new Date()
-    }
-    lastTouch = e.changedTouches[0].clientY
+document.addEventListener("pointerdown", e => { touchDown = e.clientY })
+document.addEventListener("pointerup", e => {
+    touchUp = e.clientY
+    processTouch()
 })
+
+function processTouch() {
+    if(touchDown - touchUp  < 0) lastSection()
+    if(touchDown - touchUp > 0) nextSection()
+}
