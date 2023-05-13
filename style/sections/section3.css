@@ -3,8 +3,14 @@
     grid-auto-flow: row;
     gap: 1vh;
     position: absolute;
+    height: fit-content;
+}
+
+#project-wrapper {
+    position: relative;
+    height: 60%;
+    overflow: hidden;
     top: 5vh;
-    width: calc(100% - 2vh);
 }
 
 #projects-container>a>:first-child {
@@ -17,19 +23,22 @@
     color: var(--text-color);
 }
 
-#projects-container>a {
-    text-decoration: none;
-    color: var(--text-color);
-    background-color: var(--secondary-bg-color);
-    border-radius: 1vh;
-    text-align: center;
-    counter-increment: projects;
-}
-
 #projects-container>a>:first-child::before {
     content: counter(projects) ". ";
     display: inline;
     position: absolute;
     left: 2%;
     font-size: 100%;
+}
+
+.project {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--secondary-bg-color);
+    border-radius: 1vh;
+    text-align: center;
+    counter-increment: projects;
+    left: 5%;
+    position: relative;
+    width: 90%;
 }
