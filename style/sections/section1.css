@@ -20,6 +20,7 @@
 
 #link-container:hover>a>ion-icon {
     filter: blur(0.2vh) brightness(80%);
+    transform: scale(0.75);
 }
 
 #link-container>a:hover>ion-icon {
