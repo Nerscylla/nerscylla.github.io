@@ -18,12 +18,14 @@
     transition: 500ms;
 }
 
-#link-container:hover>a>ion-icon {
-    filter: blur(0.2vh) brightness(80%);
-    transform: scale(0.75);
-}
+@media (hover: hover) {
+    #link-container:hover>a>ion-icon {
+        filter: blur(0.2vh) brightness(80%);
+        transform: scale(0.75);
+    }
 
-#link-container>a:hover>ion-icon {
-    transform: scale(1.5);
-    filter: blur(0);
+    #link-container>a:hover>ion-icon {
+        transform: scale(1.5);
+        filter: blur(0);
+    }
 }

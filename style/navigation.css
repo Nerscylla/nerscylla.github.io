@@ -36,8 +36,15 @@
     transition: 250ms;
 }
 
-#next-button:hover {
-    transform: scale(2) translate(-25%, -25%);
+@media (hover: hover){
+    #next-button:hover {
+        transform: scale(2) translate(-25%, -25%);
+    }
+    
+    a:hover::after {
+        width: 100%;
+        left: 0;
+    }
 }
 
 nav>a {
@@ -56,9 +63,4 @@ nav>a::after {
     transition: 500ms;
     position: relative;
     left: 50%;
-}
-
-a:hover::after {
-    width: 100%;
-    left: 0;
 }
