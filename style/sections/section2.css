@@ -1,40 +1,52 @@
-#contact-form>input, #contact-form>textarea {
-    background-color: var(--secondary-bg-color);
-    color: var(--text-color);
-    padding: 0.5vh;
-    border: var(--lighter-secondary-bg-color) 5px solid;
-    border-radius: 10px;
-    font-size: 1.5em;
+#contact-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#contact-form>input:focus, #contact-form>textarea:focus {
-    outline: var(--highlight-color) thick solid;
+@media only screen and (min-height: 300px) {
+    #contact-form * {
+        margin: 1%;
+    }
 }
 
-#contact-form>input[type="email"] {
-    position: absolute;
-    top: 7.5vh;
-    left: 50vw;
-    transform: translate(-50%, 0);
-    height: 2rem;
-    width: fit-content;
-    text-align: center;
+#contact-form > div {
+    display: flex;
+    flex-direction: row;
 }
 
-#contact-form>textarea {
-    position: absolute;
-    top: calc(5vh + 2rem + 10vh);
-    left: 50vw;
-    transform: translateX(-50%);
+#contact-form > span {
     width: 75%;
-    height: 35%;
     text-align: center;
-    resize: vertical;
 }
 
-#contact-form>input[type="submit"] {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#contact-message {
+    resize: none;
+}
+
+#contact-form input,
+#contact-form textarea {
+    background-color: var(--secondary-bg-color);
+    border: var(--text-color 2px solid);
+    border-radius: 1vh;
+    position: relative;
+    height: 40%;
+    width: 100%;
+}
+
+#contact-form input[type="submit"] {
+    max-width: 75%;
+    min-width: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+    #contact-form>div{
+        flex-direction: column;
+    }
+}
+
+#contact-form {
+    color: var(--text-color);
 }

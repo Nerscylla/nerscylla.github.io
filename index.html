@@ -45,8 +45,27 @@
 
     <section id="section2" class="sections" style="z-index: 1;">
         <form id="contact-form" action="https://contact-api-lwe8.onrender.com/new/" method="post">
-            <input type="email" name="email" autocomplete="email" placeholder="example@email.com" required>
-            <textarea name="message" placeholder="Hello, I wanted to reach out to you for..." required></textarea>
+            <div id="nessecarry-form">
+                <div id="contact-mail-wrapper">
+                    <label for="contact-mail">Email*:</label>
+                    <input type="email" name="email" autocomplete="email" placeholder="example@email.com" id="contact-mail" required>
+                </div>
+                <div id="contact-message-wrapper">
+                    <label for="contact-message">Message*:</label>
+                    <textarea name="message" placeholder="Hello, I wanted to reach out to you for..." id="contact-message" required></textarea>
+                </div>
+            </div>
+            <div id="unnessecarry-form">
+                <div id="contact-phone-wrapper">
+                    <label for="contact-phone">Phone:</label>
+                    <input type="tel" autocomplete="tel" name="phone" id="contact-phone" placeholder="+0 123 456 78901">
+                </div>
+                <div id="contact-name-wrapper">
+                    <label for="contact-name">Name:</label>
+                    <input type="text" autocomplete="name" name="name" id="contact-name" placeholder="John Doe">
+                </div>
+            </div>
+            <span>Note: by submitting this form, you agree to me seeing your entered information, and it beeing saved.</span>
             <input type="submit">
         </form>
     </section>
@@ -56,11 +75,6 @@
             <div id="projects-container"></div>
         </div>
     </section>
-
-    <footer>
-        <span>🚧🛠️🏗️ site under construction 🏗️🛠️🚧</span>
-    </footer>
-
     <script src="scripts/main.js"></script>
 </body>
 </html>
