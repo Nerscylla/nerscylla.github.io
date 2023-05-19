@@ -15,7 +15,7 @@ xhr.onload = () => {
 
 function addProjects() {
     repos.sort((a, b) => 0.5 - Math.random())
-    repos.forEach((item, index, arr) => {
+    repos.forEach(item => {
         const newLink = document.createElement("a")
         const repoLinkName = document.createTextNode(item.full_name)
         let repoLinkDescription = document.createTextNode(item.description)
@@ -39,9 +39,4 @@ function addProjects() {
             document.getElementById("projects-container").removeChild(document.getElementById("projects-container").lastChild)
         }
     }, 10);
-}
-
-function randomStart() {
-    const randomIndex = Math.floor((Math.random() * (repos.length - 3)) + 1)
-    return(randomIndex)
 }
