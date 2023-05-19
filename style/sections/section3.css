@@ -1,17 +1,22 @@
 #projects-container {
-    display: grid;
-    grid-auto-flow: row;
+    display: flex;
+    flex-direction: column;
     gap: 1vh;
     position: absolute;
     height: fit-content;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 #project-wrapper {
+    display: flex;
     position: relative;
     height: 60%;
     overflow: hidden;
     top: 5vh;
+    justify-content: center;
+    align-items: center;
 }
 
 #projects-container>* {
@@ -49,7 +54,7 @@
     background-color: var(--secondary-bg-color);
     border-radius: 1vh;
     text-align: center;
-    left: 5%;
     position: relative;
     width: 90%;
+
 }
