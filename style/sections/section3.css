@@ -4,6 +4,7 @@
     gap: 1vh;
     position: absolute;
     height: fit-content;
+    overflow: hidden;
 }
 
 #project-wrapper {
@@ -13,9 +14,15 @@
     top: 5vh;
 }
 
+#projects-container>* {
+    word-break: break-all;
+}
+
 #projects-container>a>:first-child {
-    font-size: 2rem;
+    position: relative;
+    font-size: clamp(1rem, 6vw, 2rem);
     color: var(--text-color);
+    max-width: 70%;
 }
 
 #projects-container>a>:last-child {
@@ -23,12 +30,17 @@
     color: var(--text-color);
 }
 
-#projects-container>a>:first-child::before {
-    content: counter(projects) ". ";
-    display: inline;
-    position: absolute;
-    left: 2%;
-    font-size: 100%;
+@media only screen and (min-width: 570px) {
+    #projects-container>a>:first-child::before {
+        content: counter(projects) ". ";
+        display: inline;
+        position: relative;
+        left: 0;
+        font-size: clamp(1rem, 6vw, 2rem);
+    }
+    .project {
+        counter-increment: projects;
+    }
 }
 
 .project {
@@ -37,7 +49,6 @@
     background-color: var(--secondary-bg-color);
     border-radius: 1vh;
     text-align: center;
-    counter-increment: projects;
     left: 5%;
     position: relative;
     width: 90%;
