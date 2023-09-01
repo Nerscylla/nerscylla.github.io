@@ -1,66 +1,93 @@
-:root {
-    --main-bg-color: #2B3D41;
-    --secondary-bg-color: #4C5F6B;
-    --text-color: #E0E2DB;
-    --highlight-color: #A37774;
-    --lighter-secondary-bg-color: #5B6F7A;
-}
-
-#nav-bar {
-    position: relative;
-    background-color: var(--secondary-bg-color);
-    width: 90vw;
-    left: 4vw;
+header {
+    position: fixed;
+    top: 3%;
+    height: 5rem;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding: 1vh;
-    border-radius: 1vh;
-    z-index: 1000;
-    height: fit-content;
-}
-
-#next-button {
-    z-index: 1000;
-    position: absolute;
-    top: 80vh;
-    color: var(--text-color);
-    background-color: var(--secondary-bg-color);
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    border: none;
-    height: 5vh;
-    width: 5vh;
-    border-radius: 2.5vh;
-    font-size: 4vh;
-    transition: 250ms;
-}
-
-@media (hover: hover){
-    #next-button:hover {
-        transform: scale(2) translate(-25%, -25%);
-    }
+    justify-content: center;
     
-    a:hover::after {
+}
+
+#header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    width: 88%;
+    padding-inline: 1%;
+    padding-block: 8px;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+}
+
+.header-image {
+    border-radius: 10px;
+    height: 4rem;
+    aspect-ratio: 1/1;
+}
+
+.header-nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-link {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: scale 0.1s;
+    transition-delay: 0.25s;
+    padding-inline: 1%;
+    text-align: center;
+}
+
+
+/* hover effects for nav links */
+@media (hover: hover) {
+    .header-link:hover {
+        scale: 1.2;
+    }
+
+    .header-link::after {
+        content: "";
+        background-color: var(--buttons--secondary);
+        height: 10px;
+        width: 0%;
+        display: block;
+        border-radius: 100vh;
+        left: 50%;
+        transition: width 0.25s, left 0.25s;
+        position: relative;
+    }
+
+    .header-link:hover::after {
         width: 100%;
-        left: 0;
+        left: 0%;
     }
 }
 
-nav>a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 2vh;
+@media only screen and (max-width: 1160px) {
+    .header-nav {
+        width: 75%;
+    }
 }
 
-nav>a::after {
-    content: "";
-    display: block;
-    height: 10px;
-    background-color: var(--highlight-color);
-    border-radius: 5px;
-    width: 0;
-    transition: 500ms;
-    position: relative;
-    left: 50%;
+@media only screen and (max-width: 800px) {
+    .header-nav {
+        width: calc(100% - 3rem);
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .header-link {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .header-link {
+        width: 40%;
+    }
 }

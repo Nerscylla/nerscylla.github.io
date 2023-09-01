@@ -1,83 +1,51 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: #2B3D41;">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The_Baum's personal Website</title>
+    <title>TheBaum's personal Website</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/navigation.css">
+    <link rel="stylesheet" href="style/variables.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
-    <button id="next-button" onclick="nextSection()">↓</button>
-    <div id="progress-bar"></div>
-    <nav id="nav-bar">
-        <a href="#0" id="section1link" class="link">Start</a>
-        <a href="#1" id="section2link" class="link">Links</a>
-        <a href="#2" id="section3link" class="link">Contact</a>
-        <a href="#3" id="section4link" class="link">Projects</a>
-    </nav>
-
-    <section id="section0" class="sections" style="z-index: 10;">
-        <div id="greetings-container">
-            <label>Hello,</label>
-            <label>I am:</label>
-            <label>The_Baum.</label>
-            <label>I'm a Student from Germany.</label>
-        </div>
-    </section>
-
-    <section id="section1" class="sections" style="z-index: 1;">
-        <div id="link-container">
-            <a href="https://github.com/TheBaum123" target="_blank">
-                <ion-icon name="logo-github"></ion-icon>
-            </a>
-            <a href="https://www.youtube.com/channel/UCvKre5GLBJHx5u3DgcW3Y_A" target="_blank">
-                <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-            <a href="https://twitter.com/the_baum123" target="_blank">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-            <a href="https://chat-app-6bnk.onrender.com/" target="_blank">
-                <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-            </a>
-        </div>
-    </section>
-
-    <section id="section2" class="sections" style="z-index: 1;">
-        <form id="contact-form" action="https://contact-api-lwe8.onrender.com/new/" method="post">
-            <div id="nessecarry-form">
-                <div id="contact-mail-wrapper">
-                    <label for="contact-mail">Email*:</label>
-                    <input type="email" name="email" autocomplete="email" placeholder="example@email.com" id="contact-mail" required>
-                </div>
-                <div id="contact-message-wrapper">
-                    <label for="contact-message">Message*:</label>
-                    <textarea name="message" placeholder="Hello, I wanted to reach out to you for..." id="contact-message" required></textarea>
-                </div>
+<body style="background-color: #292831;">
+    <div id="page-wrapper">
+        <header>
+            <div id="header-wrapper">
+                <img class="header-item profile-picture header-image" src="favicon.ico" alt="TheBaum's profile picture">
+                <nav id="header-nav" class="header-nav header-links">
+                    <a class="header-item header-link" href="#about">About</a>
+                    <a class="header-item header-link" href="#projects">Projects</a>
+                    <a class="header-item header-link" href="#blog">Blog</a>
+                    <a class="header-item header-link" href="#contact">Contact</a>
+                </nav>
             </div>
-            <div id="unnessecarry-form">
-                <div id="contact-phone-wrapper">
-                    <label for="contact-phone">Phone:</label>
-                    <input type="tel" autocomplete="tel" name="phone" id="contact-phone" placeholder="+0 123 456 78901">
-                </div>
-                <div id="contact-name-wrapper">
-                    <label for="contact-name">Name:</label>
-                    <input type="text" autocomplete="name" name="name" id="contact-name" placeholder="John Doe">
-                </div>
-            </div>
-            <span>Note: by submitting this form, you agree to me seeing your entered information, and it beeing saved.</span>
-            <input type="submit">
-        </form>
-    </section>
-
-    <section id="section3" class="sections" style="z-index: 1;">
-        <div id="project-wrapper">
-            <div id="projects-container"></div>
-        </div>
-    </section>
+        </header>
+        <main>
+            <section class="section about-section" id="about">
+                <article class="about-article">
+                    <h1>Hi, I'm TheBaum</h1>
+                    <p>Student, IT hobbyist and homelabber from germany.</p>
+                    <p>I spend my time learning web technologys and data science.</p>
+                </article>
+                <article class="about-article">
+                    <h1>My Freetime</h1>
+                    <p>
+                        In my freetime I like to do photography,
+                        Tae Kwon Do and of course last but not least
+                        I like to play arround with different programming
+                        languages and learn things about computers on a
+                        hardware and software level.
+                    </p>
+                </article>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>
