@@ -164,3 +164,51 @@ p {
     height: calc(100vh - 7rem);
     border-radius: 10px;
 }
+
+
+/* contact me section */
+
+/* icons */
+.icons-wrapper {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.icons-wrapper>a>img {
+    height: 5rem;
+    width: 5rem;
+}
+
+
+/* hover animation on icons */
+@media only screen and (hover: hover) {
+    .icons-wrapper>a {
+        transition: scale 250ms;
+    }
+
+    @supports selector(:has(*)) {
+        .icons-wrapper>a:has(+ a:hover) {
+            scale: 1.2;
+        }
+        .icons-wrapper>a:hover + a {
+            scale: 1.2;
+        }
+        .icons-wrapper>a:hover {
+            scale: 1.5
+        }
+    }
+
+    @supports (not selector(:has(*))) {
+        .icons-wrapper:hover>a {
+            scale: 0.8;
+        }
+
+        .icons-wrapper>a:hover {
+            scale: 1.2;
+        }
+    }
+}
