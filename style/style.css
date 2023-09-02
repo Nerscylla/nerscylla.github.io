@@ -162,4 +162,5 @@ p {
 .blog {
     width: 100%;
     height: calc(100vh - 7rem);
+    border-radius: 10px;
 }
