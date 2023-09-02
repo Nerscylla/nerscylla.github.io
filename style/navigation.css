@@ -44,7 +44,6 @@ header {
 }
 
 
-/* hover effects for nav links */
 @media (hover: hover) {
     .header-link:hover {
         scale: 1.2;
