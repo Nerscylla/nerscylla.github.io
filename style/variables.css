@@ -1,12 +1,19 @@
 :root {
+    /* background colors */
     --bg-primary: #292831;
     --bg-mix-dark: #31303A;
     --bg-mix: #383743;
     --bg-mix-light: #3F3E4C;
     --bg-secondary: #464554;
+
+    /* text colors */
     --text: #EADCF0;
     --text-light: #F5EEF8;
+
+    /* accent color */
     --accent: #CF1E65;
+
+    /* button colors */
     --buttons--primary: #CE7CD7;
     --buttons--mix: #924cae;
     --buttons--secondary: #571B84;
