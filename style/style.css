@@ -154,3 +154,12 @@ p {
         transition: left 500ms, width 500ms;
     }
 }
+
+
+/* blog section */
+
+/* full size iframe */
+.blog {
+    width: 100%;
+    height: calc(100vh - 7rem);
+}
