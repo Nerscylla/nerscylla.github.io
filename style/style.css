@@ -4,11 +4,15 @@
     scroll-behavior: smooth;
 }
 
+
+/* set default text color, remove body margin */
 body {
     color: var(--text);
     margin: 0;
 }
 
+
+/* change some default font sizes */
 h1 {
     font-size: 2rem;
 }
@@ -17,11 +21,15 @@ p {
     font-size: 1.2rem;
 }
 
+
+/* style sections in general */
 .section {
     width: 90%;
     padding-inline: 5%;
 }
 
+
+/* stlye about me */
 .about-article {
     max-width: 530px;
 }
@@ -36,6 +44,7 @@ p {
 }
 
 
+/* about me in row instead of column on big screens */
 @media only screen and (min-width: 800px) {
     .about-article:nth-child(2) {
         text-align: end;
@@ -50,16 +59,25 @@ p {
     }
 }
 
+
+/* limit about me text width when next to each other and to close */
 @media only screen and (800px <= width <= 1200px) {
     .about-article {
         max-width: 40%;
     }
 }
 
-.section:not(:nth-child(1)) {
+
+/* add top padding to not about me sections to not hide content behind nav bar */
+.section:not(.about-section) {
     padding-top: 7rem;
 }
 
+
+
+/* project section */
+
+/* default styles for projects */
 .project {
     background-color: var(--bg-mix);
     border-radius: 15px;
@@ -72,49 +90,8 @@ p {
     align-items: center;
 }
 
-@media only screen and (max-width: 700px) {
-    .project-wrapper {
-        flex-direction: column;
-    }
-}
-
 .project-link {
     text-decoration: none;
-}
-
-.project-link::after,
-.project-link::before {
-    content: "";
-    width: 0;
-    height: 10px;
-    position: relative;
-    display: block;
-}
-
-@media (hover: hover) {
-    .project-link::after,
-    .project-link::before {
-        border-radius: 100vh;
-        left: 50%;
-        --percentage: 50%;
-        background: linear-gradient(var(--rotation), var(--buttons--secondary) var(--percentage), var(--buttons--mix));
-        transition: left 100ms, width 100ms;
-    }
-
-    .project-link::before {
-        --rotation: 90deg;
-    }
-
-    .project-link::after {
-        --rotation: -90deg;
-    }
-
-    .project-link:hover::after,
-    .project-link:hover::before {
-        width: 100%;
-        left: 0;
-        transition: left 500ms, width 500ms;
-    }
 }
 
 .project-wrapper>* {
@@ -124,8 +101,56 @@ p {
     word-wrap: break-word;
 }
 
-@media only screen and (min-width: 699px) {
-    .project-wrapper>.project-description {
-        text-align: end;
+.project-description {
+    text-align: end;
+}
+
+
+/* stack heading and description instead of column on small screens */
+@media only screen and (max-width: 700px) {
+    .project-wrapper {
+        flex-direction: column;
+    }
+
+    .project-description {
+        text-align: left;
+    }
+}
+
+/* spacing between projects / pseudoelements */
+.project-link::after,
+.project-link::before {
+    content: "";
+    width: 0;
+    height: 10px;
+    position: relative;
+    display: block;
+}
+
+
+/* hover animation for projects */
+@media (hover: hover) {
+    .project-link::before {
+        --rotation: 90deg;
+    }
+
+    .project-link::after {
+        --rotation: -90deg;
+    }
+
+    .project-link::after,
+    .project-link::before {
+        border-radius: 100vh;
+        left: 50%;
+        --percentage: 50%;
+        background: linear-gradient(var(--rotation), var(--buttons--secondary) var(--percentage), var(--buttons--mix));
+        transition: left 100ms, width 100ms;
+    }
+
+    .project-link:hover::after,
+    .project-link:hover::before {
+        width: 100%;
+        left: 0;
+        transition: left 500ms, width 500ms;
     }
 }
