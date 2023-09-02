@@ -1,3 +1,4 @@
+/* general header styles */
 header {
     position: fixed;
     top: 3%;
@@ -5,7 +6,6 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    
 }
 
 #header-wrapper {
@@ -19,12 +19,16 @@ header {
     border-radius: 10px;
 }
 
+
+/* image */
 .header-image {
     border-radius: 10px;
     height: 4rem;
     aspect-ratio: 1/1;
 }
 
+
+/* navigation item */
 .header-nav {
     width: 50%;
     display: flex;
@@ -44,6 +48,7 @@ header {
 }
 
 
+/* hover effect */
 @media (hover: hover) {
     .header-link:hover {
         scale: 1.2;
@@ -67,6 +72,8 @@ header {
     }
 }
 
+
+/* responsive layout and text size */
 @media only screen and (max-width: 1160px) {
     .header-nav {
         width: 75%;
