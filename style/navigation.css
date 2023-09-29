@@ -42,7 +42,7 @@ header {
     font-size: 1.5rem;
     text-decoration: none;
     color: var(--text);
-    transition: scale 0.1s;
+    transition: scale 0.2s;
     transition-delay: 0.25s;
     padding-inline: 1%;
     text-align: center;
