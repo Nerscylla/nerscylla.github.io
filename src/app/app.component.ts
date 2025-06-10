@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrl: './app.component.scss',
+	imports: [NavBarComponent, AboutMeComponent],
 })
 export class AppComponent {
-  title = 'nerscylla.github.io';
+	title = 'About: Nerscylla';
 }

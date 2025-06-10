@@ -1,0 +1,14 @@
+p {
+	font-size: 2rem;
+	width: clamp(300px, 60%, 1440px);
+	text-align: right;
+}
+
+:host {
+	padding: 0 clamp(10px, 5%, 50px);
+	min-height: calc(92.5vh - 2 * 5px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+}
