@@ -1,0 +1,16 @@
+:host {
+	min-height: 30vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background: var(--secondary-bg);
+	border: 5px var(--accent) solid;
+	border-radius: 25px;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.languages img {
+	margin: 0 5px;
+}
