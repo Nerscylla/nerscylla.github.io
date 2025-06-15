@@ -5,16 +5,32 @@
 }
 
 #projects {
-	padding: 0 clamp(0px, 10vw, 200px);
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: clamp(40px, 5vw, 100px);
+	margin: 10vh 0;
+	div.project-cont {
+		padding: 0 clamp(0px, 10vw, 200px);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: clamp(40px, 5vw, 100px);
 
-	@media (max-width: 900px) {
-		grid-template-columns: 1fr;
+		@media (max-width: 900px) {
+			grid-template-columns: 1fr;
+		}
+
+		@media (max-width: 600px) {
+			padding: 0;
+		}
 	}
-
-	@media (max-width: 600px) {
-		padding: 0;
+	div.heading-cont {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h2 {
+			text-align: center;
+			border-bottom: 3px var(--accent) solid;
+			width: fit-content;
+			margin-bottom: 25px;
+			font-size: 2em;
+			padding-bottom: 5px;
+		}
 	}
 }

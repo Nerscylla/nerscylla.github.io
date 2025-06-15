@@ -2,6 +2,13 @@ p {
 	font-size: 2rem;
 	width: clamp(300px, 60%, 1440px);
 	text-align: right;
+	@media (max-width: 820px) {
+		font-size: 1.5rem;
+	}
+
+	@media (max-height: 820px) {
+		padding-top: 4rem;
+	}
 }
 
 :host {
