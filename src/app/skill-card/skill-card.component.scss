@@ -1,0 +1,30 @@
+div {
+	height: 100%;
+	background-color: var(--secondary-bg);
+	border: 3px var(--accent) solid;
+	border-radius: 25px;
+	display: grid;
+	grid-template-rows: 1fr 2fr 4fr;
+	place-items: center;
+	gap: 10px;
+	font-size: 2rem;
+	padding-inline: 20px;
+	@media (max-width: 1000px) {
+		font-size: 1.5rem;
+	}
+	ng-icon {
+		font-size: 10rem;
+		height: 15rem;
+		--fg: var(--accent);
+
+		@media (max-width: 1000px) {
+			font-size: 5rem;
+			height: 7rem;
+		}
+	}
+}
+
+h3,
+p {
+	text-align: center;
+}
