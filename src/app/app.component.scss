@@ -57,14 +57,24 @@ div.project-cont {
 	}
 }
 
-.skillgrid {
+.skill-card-grid {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
 	gap: clamp(40px, 2.5vw, 75px);
+}
+
+.skill-grid {
+	grid-template-columns: repeat(4, 1fr);
 	@media (max-width: 1200px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	@media (max-width: 600px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.learning-grid {
+	grid-template-columns: repeat(3, 1fr);
+	@media (max-width: 800px) {
 		grid-template-columns: 1fr;
 	}
 }
