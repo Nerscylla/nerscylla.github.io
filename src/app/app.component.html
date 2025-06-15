@@ -1,7 +1,10 @@
 <app-nav-bar></app-nav-bar>
-<app-about-me id="start"></app-about-me>
 
-<div id="projects">
+<div id="start" class="page">
+	<app-about-me id="start"></app-about-me>
+</div>
+
+<div id="projects" class="page">
 	<div class="heading-cont">
 		<h2>Projects</h2>
 	</div>
@@ -13,9 +16,14 @@
 	</div>
 </div>
 
-<div id="skills">
-	<app-skill-card skill="AngularJS" />
-	<app-skill-card skill="TypeScript" />
-	<app-skill-card skill="PHP" />
-	<app-skill-card skill="Python" />
+<div id="skills" class="page">
+	<div class="heading-cont">
+		<h2>My Skills</h2>
+	</div>
+	<div class="skillgrid">
+		<app-skill-card skill="AngularJS" />
+		<app-skill-card skill="TypeScript" />
+		<app-skill-card skill="PHP" />
+		<app-skill-card skill="Python" />
+	</div>
 </div>

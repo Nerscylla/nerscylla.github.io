@@ -2,35 +2,69 @@
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
-#projects {
-	margin: 10vh 0;
-	div.project-cont {
-		padding: 0 clamp(0px, 10vw, 200px);
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: clamp(40px, 5vw, 100px);
-
-		@media (max-width: 900px) {
-			grid-template-columns: 1fr;
-		}
-
-		@media (max-width: 600px) {
-			padding: 0;
+div.page {
+	width: clamp(320px, 90vw, 1440px);
+	@media (max-width: 400px) {
+		width: 100vw;
+		app-about-me {
+			margin-inline: 5%;
 		}
 	}
-	div.heading-cont {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		h2 {
-			text-align: center;
-			border-bottom: 3px var(--accent) solid;
-			width: fit-content;
-			margin-bottom: 25px;
-			font-size: 2em;
-			padding-bottom: 5px;
-		}
+	padding: 10vh 0;
+}
+
+.page#start {
+	display: flex;
+	flex-direction: row;
+	justify-content: end;
+	align-items: center;
+	padding-top: 0;
+	app-about-me {
+		width: clamp(300px, 60%, 1440px);
+	}
+	min-height: 100vh;
+}
+
+div.heading-cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5vh;
+	h2 {
+		text-align: center;
+		border-bottom: 3px var(--accent) solid;
+		width: fit-content;
+		margin-bottom: 25px;
+		font-size: 2em;
+		padding-bottom: 5px;
+	}
+}
+
+div.project-cont {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: clamp(40px, 2.5vw, 75px);
+
+	@media (max-width: 900px) {
+		grid-template-columns: 1fr;
+	}
+
+	@media (max-width: 600px) {
+		padding: 0;
+	}
+}
+
+.skillgrid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: clamp(40px, 2.5vw, 75px);
+	@media (max-width: 1200px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: 600px) {
+		grid-template-columns: 1fr;
 	}
 }
