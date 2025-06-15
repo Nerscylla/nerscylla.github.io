@@ -25,11 +25,6 @@ Welp, it's my website, not much to see here.
 | Accent               | `#a871a8` |
 | Secondary Background | `#251B3B` |
 
-
-## to implement in the future (endpoints and stuff)
-"https://api.github.com/repos/{user}/{repository}/languages"
-"https://api.github.com/repos/{owner}/{repo}/license"
-
 ## Development server
 
 To start a local development server, run:
