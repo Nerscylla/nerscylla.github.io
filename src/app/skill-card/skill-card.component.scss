@@ -15,6 +15,7 @@ div {
 	ng-icon {
 		font-size: 10rem;
 		height: 15rem;
+		--fg: var(--accent);
 
 		@media (max-width: 1000px) {
 			font-size: 5rem;
@@ -25,10 +26,5 @@ div {
 
 h3,
 p {
-	color: var(--fg);
 	text-align: center;
-}
-
-* {
-	color: var(--accent);
 }

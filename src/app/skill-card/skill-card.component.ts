@@ -37,4 +37,8 @@ export class SkillCardComponent {
 	get description(): string {
 		return data[this.skill as keyof typeof data].description;
 	}
+
+	get link(): string {
+		return data[this.skill as keyof typeof data].link;
+	}
 }

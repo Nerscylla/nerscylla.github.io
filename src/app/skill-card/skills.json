@@ -2,31 +2,38 @@
 	"data": {
 		"AngularJS": {
 			"description": "A TypeScript-based framework for building dynamic web applications with a structured architecture.",
-			"icon": "simpleAngular"
+			"icon": "simpleAngular",
+			"link": "https://angular.dev/"
 		},
-		"CSharp": {
+		"C#": {
 			"description": "A powerful, object-oriented language primarily used for game development, enterprise applications, and Windows software.",
-			"icon": "diCsharpPlain"
+			"icon": "diCsharpPlain",
+			"link": "https://learn.microsoft.com/en-us/dotnet/csharp/"
 		},
-		"discorddotjs": {
+		"discord.js": {
 			"description": "A JavaScript library for interacting with the Discord API, enabling bot development and automation.",
-			"icon": "diDiscordjsPlain"
+			"icon": "diDiscordjsPlain",
+			"link": "https://discord.js.org/"
 		},
 		"PHP": {
 			"description": "A server-side scripting language widely used for web development and database-driven applications.",
-			"icon": "simplePhp"
+			"icon": "simplePhp",
+			"link": "https://www.php.net/"
 		},
 		"Python": {
 			"description": "A versatile, high-level programming language known for its simplicity and extensive libraries.",
-			"icon": "simplePython"
+			"icon": "simplePython",
+			"link": "https://www.python.org/"
 		},
 		"Rust": {
 			"description": "A memory-safe, high-performance programming language known for its reliability and concurrency support.",
-			"icon": "simpleRust"
+			"icon": "simpleRust",
+			"link": "https://www.rust-lang.org/"
 		},
 		"TypeScript": {
 			"description": "A superset of JavaScript that adds static typing, making code more scalable and maintainable.",
-			"icon": "simpleTypescript"
+			"icon": "simpleTypescript",
+			"link": "https://www.typescriptlang.org/"
 		}
 	}
 }
