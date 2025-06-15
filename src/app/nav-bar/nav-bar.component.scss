@@ -2,9 +2,9 @@
 	min-height: 7.5vh;
 	position: sticky;
 	top: 2.5vh;
-	width: 90%;
 	left: 5%;
 	z-index: 10;
+	width: clamp(320px, 90vw, 1440px);
 }
 
 nav {
