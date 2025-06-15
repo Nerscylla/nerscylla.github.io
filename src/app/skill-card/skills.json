@@ -1,0 +1,32 @@
+{
+	"data": {
+		"AngularJS": {
+			"description": "A TypeScript-based framework for building dynamic web applications with a structured architecture.",
+			"icon": "simpleAngular"
+		},
+		"CSharp": {
+			"description": "A powerful, object-oriented language primarily used for game development, enterprise applications, and Windows software.",
+			"icon": "diCsharpPlain"
+		},
+		"discorddotjs": {
+			"description": "A JavaScript library for interacting with the Discord API, enabling bot development and automation.",
+			"icon": "diDiscordjsPlain"
+		},
+		"PHP": {
+			"description": "A server-side scripting language widely used for web development and database-driven applications.",
+			"icon": "simplePhp"
+		},
+		"Python": {
+			"description": "A versatile, high-level programming language known for its simplicity and extensive libraries.",
+			"icon": "simplePython"
+		},
+		"Rust": {
+			"description": "A memory-safe, high-performance programming language known for its reliability and concurrency support.",
+			"icon": "simpleRust"
+		},
+		"TypeScript": {
+			"description": "A superset of JavaScript that adds static typing, making code more scalable and maintainable.",
+			"icon": "simpleTypescript"
+		}
+	}
+}
