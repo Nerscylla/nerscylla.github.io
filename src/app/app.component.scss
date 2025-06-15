@@ -6,6 +6,7 @@
 }
 
 div.page {
+	padding: 10vh 0;
 	width: clamp(320px, 90vw, 1440px);
 	@media (max-width: 400px) {
 		width: 100vw;
@@ -13,10 +14,10 @@ div.page {
 			margin-inline: 5%;
 		}
 	}
-	padding: 10vh 0;
 }
 
 .page#start {
+	min-height: 100vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: end;
@@ -25,7 +26,6 @@ div.page {
 	app-about-me {
 		width: clamp(300px, 60%, 1440px);
 	}
-	min-height: 100vh;
 }
 
 div.heading-cont {
