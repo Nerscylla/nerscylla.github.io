@@ -34,3 +34,16 @@ a::after {
 a:hover::after {
 	scale: 1 1;
 }
+
+.license {
+	@media (max-width: 450px) {
+		img {
+			max-width: 320px;
+		}
+	}
+	@media (max-width: 350px) {
+		img {
+			max-width: 280px;
+		}
+	}
+}
